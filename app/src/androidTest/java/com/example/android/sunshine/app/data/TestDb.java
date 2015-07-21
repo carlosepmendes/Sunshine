@@ -18,14 +18,9 @@ package com.example.android.sunshine.app.data;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.location.Location;
 import android.test.AndroidTestCase;
 
 import java.util.HashSet;
-
-import static com.example.android.sunshine.app.data.TestUtilities.createNorthPoleLocationValues;
-import static com.example.android.sunshine.app.data.TestUtilities.insertNorthPoleLocationValues;
-import static com.example.android.sunshine.app.data.TestUtilities.validateCurrentRecord;
 
 public class TestDb extends AndroidTestCase {
 
@@ -44,8 +39,7 @@ public class TestDb extends AndroidTestCase {
         deleteTheDatabase();
     }
 
-/*
-
+    /*
         Students: Uncomment this test once you've written the code to create the Location
         table.  Note that you will have to have chosen the same column names that I did in
         my solution for this test to compile, so if you haven't yet done that, this is
@@ -53,7 +47,7 @@ public class TestDb extends AndroidTestCase {
 
         Note that this only tests that the Location table has the correct columns, since we
         give you the code for the weather table.  This test does not look at the
-*/
+     */
     public void testCreateDb() throws Throwable {
         // build a HashSet of all of the table names we wish to look for
         // Note that there will be another table in the DB that stores the
@@ -111,12 +105,12 @@ public class TestDb extends AndroidTestCase {
         db.close();
     }
 
- /*
+    /*
         Students:  Here is where you will build code to test that we can insert and query the
         location database.  We've done a lot of work for you.  You'll want to look in TestUtilities
         where you can uncomment out the "createNorthPoleLocationValues" function.  You can
         also make use of the ValidateCurrentRecord function from within TestUtilities.
-*/
+    */
     public void testLocationTable() {
         insertLocation();
     }
